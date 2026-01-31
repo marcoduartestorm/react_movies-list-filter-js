@@ -8,9 +8,10 @@ export const App = () => {
 
   const normalizedQuery = query.trim().toLowerCase();
 
-  const visibleMovies = moviesFromServer.filter(movie =>
-    movie.title.toLowerCase().includes(normalizedQuery) ||
-    movie.description.toLowerCase().includes(normalizedQuery)
+  const visibleMovies = moviesFromServer.filter(
+    movie =>
+      movie.title.toLowerCase().includes(normalizedQuery) ||
+      movie.description.toLowerCase().includes(normalizedQuery),
   );
 
   return (
