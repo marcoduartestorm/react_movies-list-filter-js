@@ -9,8 +9,10 @@ export const MoviesList = ({ movies, query }) => (
       const queryTrimed = query.trim().toLowerCase();
 
       if (title.includes(queryTrimed) || description.includes(queryTrimed)) {
-        return (<MovieCard key={movie.imdbId} movie={movie} />);
+        return <MovieCard key={movie.imdbId} movie={movie} />;
       }
+
+      return null;
     })}
   </div>
 );

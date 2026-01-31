@@ -22,7 +22,7 @@ export const App = () => {
                 id="search-query"
                 className="input"
                 placeholder="Type search word"
-                onChange={(event) => {
+                onChange={event => {
                   setQuery(event.target.value);
                 }}
               />
@@ -30,7 +30,7 @@ export const App = () => {
           </div>
         </div>
 
-        <MoviesList movies={moviesFromServer} query={query}/>
+        <MoviesList movies={moviesFromServer} query={query} />
       </div>
 
       <div className="sidebar">Sidebar goes here</div>
